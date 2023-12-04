@@ -1,0 +1,36 @@
+---
+import "../../styles/global.css";
+import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+---
+
+<header
+  class="lg:flex justify-between items-center lg:py-9 lg:px-60 px-5 py-4 lg:text-xs">
+  <Astronav closeOnClick>
+    <div class="flex w-full lg:w-auto justify-between">
+      <a href="/">Niel Montesa</a>
+
+      <div class="block lg:hidden">
+        <MenuIcon class="w-7 h-7" />
+      </div>
+    </div>
+    <MenuItems class="hidden lg:flex">
+      <ul class="flex flex-col lg:flex-row lg:gap-10">
+        <li class="hover:text-green-700">
+          <a href="/portfolio">Portfolio</a>
+        </li>
+        <li class="hover:text-green-700">
+          <a href="/journal">Journal</a>
+        </li>
+        <li class="hover:text-green-700">
+          <a href="/bio">Bio</a>
+        </li>
+      </ul>
+    </MenuItems>
+  </Astronav>
+</header>
+
+<style>
+  * {
+    font-family: "HelveticaNeueCyr";
+  }
+</style>

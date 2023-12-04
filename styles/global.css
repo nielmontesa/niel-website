@@ -1,0 +1,44 @@
+@import "fonts.css";
+@import "variables.css";
+
+.main {
+  background-color: var(--background-black);
+  color: white;
+}
+
+.main::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("noise.png");
+  background-size: cover;
+  opacity: 0.2;
+  z-index: -99;
+}
+
+.hero-section {
+  background: var(
+    --Header,
+    radial-gradient(
+      35.07% 35.07% at 41.67% 44.08%,
+      #213726 0%,
+      rgba(14, 14, 14, 0) 100%
+    )
+  );
+}
+
+.header-intro {
+  font-family: "EB Garamond";
+}
+
+.header-intro em {
+  color: var(--primary-green);
+}
+
+.footer {
+  background: linear-gradient(180deg, rgba(27, 27, 27, 0) 0%, #2b2b2b 100%);
+}

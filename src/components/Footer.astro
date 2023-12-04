@@ -1,0 +1,37 @@
+---
+import "../../styles/global.css";
+import Click from "./Click.astro";
+import { Icon } from "astro-icon";
+---
+
+<div
+  class="footer lg:m-auto py-24 lg:px-60 lg:py-24 px-5 lg:flex grid grid-cols-2 grid-rows-2lg:flex-auto lg:gap-60 gap-12 text-[var(--text-gray)]">
+  <div class="lg:w-1/4 col-span-2">
+    <p class="mb-5 text-base">
+      If you have a project in mind, an internship opportunity, or if you just
+      want to tell me about your day, you can contact me on my email:
+    </p>
+    <Click
+      linkText="design@nielmontesa.com"
+      textColor="text-[var(--secondary-green)]"
+    />
+  </div>
+  <div class="text-xs">
+    <p class="font-bold">Niel Montesa</p>
+    <ul class="flex-col gap-4 flex mt-5">
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Journal</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Copyright © 2023 Niel Montesa</a></li>
+    </ul>
+  </div>
+  <div class="text-xs">
+    <p>My Links</p>
+    <ul
+      class="flex lg:gap-[1] gap-1 lg:items-center lg:justify-center lg:m-auto lg:ml-[-4px] lg:mt-3 mt-5 ml-[-5px]">
+      <a href="#"> <li><Icon pack="mdi" name="linkedin" width="30" /></li></a>
+      <a href="#"> <li><Icon name="bi:medium" width="30" /></li></a>
+      <a href="#"> <li><Icon pack="mdi" name="instagram" width="30" /></li></a>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+---
+import "../../styles/global.css";
+
+const { linkText, textColor } = Astro.props;
+---
+
+<button
+  class="py-2 px-5 bg-[var(--background-gray)] rounded-lg border-[1px] border-black text-lef lg:text-base text-xs w-full lg:w-auto lg:m-auto mt-1">
+  <a href="#" class={textColor}>{linkText}</a>
+</button>
