@@ -1,0 +1,38 @@
+---
+import Layout from "./Layout.astro";
+import { Img } from "astro-imagetools/components";
+
+import { Image } from "astro:assets";
+
+const { frontmatter } = Astro.props;
+
+const { title, date, image, description, category } = frontmatter;
+---
+
+<Layout title={title}>
+  <header>
+    <div class="container">
+      <h1>{title}</h1>
+      <p>{description}</p>
+      <p>{category}</p>
+      <p>Article</p>
+      {
+        image.src && (
+          <Image
+            src={image.src}
+            alt={image.alt}
+            width={400}
+            height={400}
+            transition:name="hero"
+          />
+        )
+      }
+    </div>
+  </header>
+
+  <article>
+    <div class="content">
+      <slot />
+    </div>
+  </article>
+</Layout>

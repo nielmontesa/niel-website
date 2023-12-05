@@ -1,49 +1,82 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Click from "../components/Click.astro";
+
+import JournalCard from "../components/JournalCard.astro";
+
+const journalPosts = await Astro.glob("./journal/*.mdx");
+const portPosts = await Astro.glob("./portfolio/*.mdx");
+
+import "../../styles/global.css";
 ---
 
-<Layout title="Niel Montesa - Designer">
-  <main class="lg:px-60 px-5">
-    <div class="hero-section lg:py-32 py-16">
-      <p class="lg:text-7xl text-5xl header-intro font-normal">
-        Hello stranger, my name is <em>Niel</em> — I like designing and
-        developing user-centered interfaces.
-      </p>
+<Layout title="Niel Montesa // Designer">
+  <div class="hero-section lg:py-32 py-16 pulse">
+    <p class="lg:text-7xl text-5xl header-intro font-normal">
+      Hello stranger, my name is <em>Niel</em> — I like designing and developing
+      user-centered interfaces.
+    </p>
 
-      <p class="mt-6 text-base text-lg lg:w-1/2">
-        Information Technology student with a deep appreciation for arts and
-        design. On the side, I’m currently working as a freelance graphic
-        designer for a data science startup.
-      </p>
-      <div class="mt-6">
-        <Click
-          linkText="• Open for freelance work!"
-          textColor="text-[var(--primary-green)]"
-        />
-        <Click
-          linkText="• Currently searching for UI/UX internships!"
-          textColor="text-[var(--secondary-green)]"
-        />
+    <p class="mt-6 text-base text-lg lg:w-1/2">
+      Information Technology student with a deep appreciation for arts and
+      design. On the side, I’m currently working as a freelance graphic designer
+      for a data science startup.
+    </p>
+    <div class="mt-6">
+      <Click
+        linkText="• Open for freelance work!"
+        textColor="text-[var(--primary-green)]"
+      />
+      <Click
+        linkText="• Currently searching for UI/UX internships!"
+        textColor="text-[var(--secondary-green)]"
+      />
+    </div>
+  </div>
+
+  <section class="grid grid-cols-1 lg:grid-cols-8 gap-12">
+    <div class="lg:col-span-6">
+      <header>
+        <h2 class="text-4xl lg:mt-12">Portfolio</h2>
+        <p class="lg:mt-3">
+          Designs I helped create either from commercial or personal projects.
+          (UI/UX case study currently in progress)
+        </p>
+      </header>
+
+      <div class="grid">
+        <div class="mt-8 columns-1 lg:columns-2 gap-3">
+          {portPosts.map((post) => <JournalCard {post} />)}
+        </div>
       </div>
     </div>
+    <div class="lg:col-span-2">
+      <header>
+        <h2 class="text-4xl lg:mt-12">Journal</h2>
+        <p class="lg:mt-3">
+          Designs I helped create either from commercial or personal projects.
+          (UI/UX case study currently in progress)
+        </p>
+      </header>
 
-     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus, delectus
-    vero. Accusantium similique ullam iste minima eius in, voluptatum veniam magnam
-    repellat, deserunt fugit. Omnis minima dolor deleniti enim tenetur. Cupiditate
-    asperiores, tenetur quam, est iste, inventore deserunt officia impedit nihil
-    corporis ut ad! Quia doloremque temporibus ex nobis suscipit, recusandae architecto
-    eum voluptas est nam, aut veniam voluptatem perferendis! Doloribus quam totam
-    eaque quasi fugit iusto impedit, voluptatem culpa similique explicabo, repellat
-    sit inventore quod vero vitae natus itaque aspernatur. Excepturi rerum blanditiis
-    neque necessitatibus a similique totam adipisci! Ratione, repellendus eligendi?
-    Fugiat nobis est officia necessitatibus. Officiis enim totam dignissimos molestiae
-    exercitationem incidunt explicabo repellendus autem eius reiciendis. Sunt ex
-    temporibus modi rem magnam aliquid alias! Quaerat, maxime. Animi similique veritatis
-    quo incidunt? Alias qui magni accusamus dolor! Maiores modi rerum ullam ea molestias
-    laudantium ut voluptate vitae nam. Perferendis, quibusdam rerum. Dolorum voluptas
-    rem nostrum voluptatem laudantium! Unde dolor blanditiis amet illum earum odit
-    iure sequi alias atque, eveniet libero consequuntur in quibusdam deserunt iste,
-    adipisci rerum reiciendis quis corporis ad est quas aperiam. Nam, assumenda vel!
-  </main>
+      <div class="grid">
+        <div class="mt-8 columns-1 lg:columns-1 gap-3">
+          {journalPosts.map((post) => <JournalCard {post} />)}
+        </div>
+      </div>
+    </div>
+  </section>
 </Layout>
+<script>
+  const elements = document.querySelectorAll(".mouse-cursor-gradient-tracking");
+
+  elements.forEach((btn) => {
+    btn.addEventListener("mousemove", (e) => {
+      let rect = btn.getBoundingClientRect();
+      let x = e.clientX - rect.left;
+      let y = e.clientY - rect.top;
+      btn.style.setProperty("--x", x + "px");
+      btn.style.setProperty("--y", y + "px");
+    });
+  });
+</script>

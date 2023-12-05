@@ -1,8 +1,35 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import Click from "../../components/Click.astro";
+import JournalCard from "../../components/JournalCard.astro";
+
+const allPosts = await Astro.glob("./*.mdx");
 ---
 
 <Layout title="Niel Montesa - Designer">
-  <main class="px-60"></main>
+  <header>
+    <h2 class="text-4xl lg:mt-12">Journal</h2>
+    <p class="lg:mt-3">
+      A collection of my writing, ranging from insightful blog posts on web
+      development and comprehensive design guides to opinionated discourse and
+      critiques of film or music.
+    </p>
+  </header>
+
+  <div class="mt-8 columns-1 lg:columns-3 gap-3">
+    {allPosts.map((post) => <JournalCard {post} />)}
+  </div>
 </Layout>
+
+<script>
+  const elements = document.querySelectorAll(".mouse-cursor-gradient-tracking");
+
+  elements.forEach((btn) => {
+    btn.addEventListener("mousemove", (e) => {
+      let rect = btn.getBoundingClientRect();
+      let x = e.clientX - rect.left;
+      let y = e.clientY - rect.top;
+      btn.style.setProperty("--x", x + "px");
+      btn.style.setProperty("--y", y + "px");
+    });
+  });
+</script>

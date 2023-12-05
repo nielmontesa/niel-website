@@ -2,8 +2,8 @@
 
 @font-face {
   font-family: "HelveticaNeueCyr";
-  src: url("/fonts/HelveticaNeueCyr-Black.woff2") format("woff2"),
-    url("/fonts/HelveticaNeueCyr-Black.woff") format("woff");
+  src: url("/fonts/HelveticaNeueCyr-Black.otf") format("otf"),
+    url("/fonts/HelveticaNeueCyr-Black.otf") format("otf");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -11,8 +11,8 @@
 
 @font-face {
   font-family: "HelveticaNeueCyr";
-  src: url("/fonts/HelveticaNeueCyr-BlackItalic.woff2") format("woff2"),
-    url("/fonts/HelveticaNeueCyr-BlackItalic.woff") format("woff");
+  src: url("/fonts/HelveticaNeueCyr-BlackItalic.otf") format("otf"),
+    url("/fonts/HelveticaNeueCyr-BlackItalic.otf") format("otf");
   font-weight: 900;
   font-style: italic;
   font-display: swap;
@@ -20,8 +20,8 @@
 
 @font-face {
   font-family: "HelveticaNeueCyr";
-  src: url("/fonts/HelveticaNeueCyr-Bold.woff2") format("woff2"),
-    url("/fonts/HelveticaNeueCyr-Bold.woff") format("woff");
+  src: url("/fonts/HelveticaNeueCyr-Bold.otf") format("otf"),
+    url("/fonts/HelveticaNeueCyr-Bold.otf") format("otf");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -29,8 +29,8 @@
 
 @font-face {
   font-family: "HelveticaNeueCyr";
-  src: url("/fonts/HelveticaNeueCyr-BoldItalic.woff2") format("woff2"),
-    url("/fonts/HelveticaNeueCyr-BoldItalic.woff") format("woff");
+  src: url("/fonts/HelveticaNeueCyr-BoldItalic.otf") format("otf"),
+    url("/fonts/HelveticaNeueCyr-BoldItalic.otf") format("otf");
   font-weight: bold;
   font-style: italic;
   font-display: swap;
@@ -38,8 +38,8 @@
 
 @font-face {
   font-family: "HelveticaNeueCyr";
-  src: url("/fonts/HelveticaNeueCyr-Heavy.woff2") format("woff2"),
-    url("/fonts/HelveticaNeueCyr-Heavy.woff") format("woff");
+  src: url("/fonts/HelveticaNeueCyr-Heavy.otf") format("otf"),
+    url("/fonts/HelveticaNeueCyr-Heavy.otf") format("otf");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -47,8 +47,8 @@
 
 @font-face {
   font-family: "HelveticaNeueCyr";
-  src: url("/fonts/HelveticaNeueCyr-HeavyItalic.woff2") format("woff2"),
-    url("/fonts/HelveticaNeueCyr-HeavyItalic.woff") format("woff");
+  src: url("/fonts/HelveticaNeueCyr-HeavyItalic.otf") format("otf"),
+    url("/fonts/HelveticaNeueCyr-HeavyItalic.otf") format("otf");
   font-weight: 900;
   font-style: italic;
   font-display: swap;
@@ -56,8 +56,8 @@
 
 @font-face {
   font-family: "HelveticaNeueCyr";
-  src: url("/fonts/HelveticaNeueCyr-Italic.woff2") format("woff2"),
-    url("/fonts/HelveticaNeueCyr-Italic.woff") format("woff");
+  src: url("/fonts/HelveticaNeueCyr-Italic.otf") format("otf"),
+    url("/fonts/HelveticaNeueCyr-Italic.otf") format("otf");
   font-weight: 500;
   font-style: italic;
   font-display: swap;
@@ -65,8 +65,8 @@
 
 @font-face {
   font-family: "HelveticaNeueCyr";
-  src: url("/fonts/HelveticaNeueCyr-Light.woff2") format("woff2"),
-    url("/fonts/HelveticaNeueCyr-Light.woff") format("woff");
+  src: url("/fonts/HelveticaNeueCyr-Light.otf") format("otf"),
+    url("/fonts/HelveticaNeueCyr-Light.otf") format("otf");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -74,8 +74,8 @@
 
 @font-face {
   font-family: "HelveticaNeueCyr";
-  src: url("/fonts/HelveticaNeueCyr-LightItalic.woff2") format("woff2"),
-    url("/fonts/HelveticaNeueCyr-LightItalic.woff") format("woff");
+  src: url("/fonts/HelveticaNeueCyr-LightItalic.otf") format("otf"),
+    url("/fonts/HelveticaNeueCyr-LightItalic.otf") format("otf");
   font-weight: 300;
   font-style: italic;
   font-display: swap;
@@ -83,8 +83,8 @@
 
 @font-face {
   font-family: "HelveticaNeueCyr";
-  src: url("/fonts/HelveticaNeueCyr-Medium.woff2") format("woff2"),
-    url("/fonts/HelveticaNeueCyr-Medium.woff") format("woff");
+  src: url("/fonts/HelveticaNeueCyr-Medium.otf") format("otf"),
+    url("/fonts/HelveticaNeueCyr-Medium.otf") format("otf");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -92,8 +92,8 @@
 
 @font-face {
   font-family: "HelveticaNeueCyr";
-  src: url("/fonts/HelveticaNeueCyr-MediumItalic.woff2") format("woff2"),
-    url("/fonts/HelveticaNeueCyr-MediumItalic.woff") format("woff");
+  src: url("/fonts/HelveticaNeueCyr-MediumItalic.otf") format("otf"),
+    url("/fonts/HelveticaNeueCyr-MediumItalic.otf") format("otf");
   font-weight: 500;
   font-style: italic;
   font-display: swap;
@@ -101,8 +101,8 @@
 
 @font-face {
   font-family: "HelveticaNeueCyr";
-  src: url("/fonts/HelveticaNeueCyr-Roman.woff2") format("woff2"),
-    url("/fonts/HelveticaNeueCyr-Roman.woff") format("woff");
+  src: url("/fonts/HelveticaNeueCyr-Roman.otf") format("otf"),
+    url("/fonts/HelveticaNeueCyr-Roman.otf") format("otf");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -110,8 +110,8 @@
 
 @font-face {
   font-family: "HelveticaNeueCyr";
-  src: url("/fonts/HelveticaNeueCyr-Thin.woff2") format("woff2"),
-    url("/fonts/HelveticaNeueCyr-Thin.woff") format("woff");
+  src: url("/fonts/HelveticaNeueCyr-Thin.otf") format("otf"),
+    url("/fonts/HelveticaNeueCyr-Thin.otf") format("otf");
   font-weight: 100;
   font-style: normal;
   font-display: swap;
@@ -119,8 +119,8 @@
 
 @font-face {
   font-family: "HelveticaNeueCyr";
-  src: url("/fonts/HelveticaNeueCyr-UltraLight.woff2") format("woff2"),
-    url("/fonts/HelveticaNeueCyr-UltraLight.woff") format("woff");
+  src: url("/fonts/HelveticaNeueCyr-UltraLight.otf") format("otf"),
+    url("/fonts/HelveticaNeueCyr-UltraLight.otf") format("otf");
   font-weight: 200;
   font-style: normal;
   font-display: swap;
@@ -128,8 +128,8 @@
 
 @font-face {
   font-family: "HelveticaNeueCyr";
-  src: url("/fonts/HelveticaNeueCyr-ThinItalic.woff2") format("woff2"),
-    url("/fonts/HelveticaNeueCyr-ThinItalic.woff") format("woff");
+  src: url("/fonts/HelveticaNeueCyr-ThinItalic.otf") format("otf"),
+    url("/fonts/HelveticaNeueCyr-ThinItalic.otf") format("otf");
   font-weight: 100;
   font-style: italic;
   font-display: swap;
@@ -137,8 +137,8 @@
 
 @font-face {
   font-family: "HelveticaNeueCyr";
-  src: url("/fonts/HelveticaNeueCyr-UltraLightItalic.woff2") format("woff2"),
-    url("/fonts/HelveticaNeueCyr-UltraLightItalic.woff") format("woff");
+  src: url("/fonts/HelveticaNeueCyr-UltraLightItalic.otf") format("otf"),
+    url("/fonts/HelveticaNeueCyr-UltraLightItalic.otf") format("otf");
   font-weight: 200;
   font-style: italic;
   font-display: swap;

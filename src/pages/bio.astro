@@ -1,8 +1,38 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Click from "../components/Click.astro";
+import { Image } from "astro:assets";
+import nielPhoto from "../../public/images/niel_opaque.png";
+import Icon from "astro-icon";
 ---
 
-<Layout title="Niel Montesa - Designer">
-  <main class="px-60"></main>
+<Layout title="Niel Montesa // Bio">
+  <main class="text-base">
+    <div class="flex items-center justify-left mb-5 mt-12">
+      <h2 class="text-5xl">Bio</h2>
+      <Image src={nielPhoto} alt="Niel's Photo" width={55} />
+    </div>
+    <section class="grid grid-cols-3 grid-rows-2 gap-16">
+      <p>
+        Any designer will tell you that choosing colors can be hard — especially
+        for personal projects where there isn’t an existing design system to
+        copy hex codes from. Along with its difficulty, it is also highly
+        important. <br />
+        <br />Color is one of the first things that users will see and associate
+        your brand with. In a 7-Eleven, you don’t browse the chips section
+        looking for the word ‘Cheetos’, you first look for the bright orange
+        bag.
+      </p>
+      <p>
+        Any designer will tell you that choosing colors can be hard — especially
+        for personal projects where there isn’t an existing design system to
+        copy hex codes from. Along with its difficulty, it is also highly
+        important. <br />
+        <br />Color is one of the first things that users will see and associate
+        your brand with. In a 7-Eleven, you don’t browse the chips section
+        looking for the word ‘Cheetos’, you first look for the bright orange
+        bag.
+      </p>
+    </section>
+  </main>
 </Layout>

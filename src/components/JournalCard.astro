@@ -1,0 +1,73 @@
+---
+import { Image } from "astro:assets";
+const { post } = Astro.props;
+
+import "../../styles/global.css";
+
+const { title, date, image, description, category } = post.frontmatter;
+---
+
+<a href={post.url}>
+  <div
+    class="bg-[var(--card-gray)] border-black border-[1px] rounded-lg card mouse-cursor-gradient-tracking hvr-grow">
+    <div class="py-6 px-6">
+      <small class="text-xs font-normal uppercase text-[var(--text-gray)]"
+        >{category}</small
+      >
+      <h4 class="font-[HelveticaNeueCyr] text-lg">{title}</h4>
+    </div>
+    <div class="flex items-center justify-center">
+      {
+        image.src && (
+          <Image
+            src={image.src}
+            alt={image.alt}
+            width={300}
+            height={300}
+            transition:name="hero"
+          />
+        )
+      }
+    </div>
+  </div>
+</a>
+<style>
+  .card {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    margin-bottom: 10px;
+    break-inside: avoid;
+  }
+  .mouse-cursor-gradient-tracking {
+    position: relative;
+    background: var(--card-gray);
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+  }
+  .mouse-cursor-gradient-tracking:before {
+    --size: 0;
+    content: "";
+    position: absolute;
+    left: var(--x);
+    top: var(--y);
+    width: var(--size);
+    height: var(--size);
+    background: radial-gradient(
+      circle closest-side,
+      rgba(107, 107, 107, 0.2),
+      transparent
+    );
+    transform: translate(-50%, -50%);
+    transition:
+      width 0.2s ease,
+      height 0.2s ease;
+  }
+
+  .mouse-cursor-gradient-tracking:hover:before {
+    --size: 500px;
+  }
+</style>
