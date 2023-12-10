@@ -1,0 +1,53 @@
+article hr {
+  height: 2px;
+  border-width: 0;
+  background-color: #333;
+}
+
+article h1,
+article h2,
+article h3,
+article h4 {
+  margin-bottom: 1.5rem;
+  font-size: 3.75rem;
+}
+
+article h1 {
+  font-size: 3em;
+}
+
+article h1:not(:first-child) {
+  /* Your styles for h1 elements that are not the first child */
+  margin-top: 4rem;
+}
+
+article h2 {
+  font-weight: normal;
+  font-size: 2.25rem;
+  margin-top: 4rem;
+  margin-bottom: 0;
+}
+article p {
+  font-size: 18px;
+  color: #c8c8c8;
+  margin-top: 1.5rem;
+}
+
+article ul li,
+article ol li {
+  font-size: 18px;
+  color: #c8c8c8;
+  list-style: auto;
+  margin-top: auto;
+  line-height: 2em;
+}
+
+article ul,
+article ol {
+  margin-top: 0.5rem;
+  margin-left: 2em;
+}
+
+.content-title {
+  font-family: "EB Garamond";
+}

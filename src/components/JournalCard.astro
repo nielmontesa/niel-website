@@ -9,25 +9,34 @@ const { title, date, image, description, category } = post.frontmatter;
 
 <a href={post.url}>
   <div
-    class="bg-[var(--card-gray)] border-black border-[1px] rounded-lg card mouse-cursor-gradient-tracking hvr-grow">
-    <div class="py-6 px-6">
-      <small class="text-xs font-normal uppercase text-[var(--text-gray)]"
-        >{category}</small
-      >
-      <h4 class="font-[HelveticaNeueCyr] text-lg">{title}</h4>
-    </div>
-    <div class="flex items-center justify-center">
+    class="bg-black border-[#202020] border-[1px] rounded-[12px] card hvr-grow p-[2px]">
+    <div
+      class="bg-[var(--card-gray)] border-[#202020] border-[1px] rounded-lg mouse-cursor-gradient-tracking">
       {
-        image.src && (
-          <Image
-            src={image.src}
-            alt={image.alt}
-            width={300}
-            height={300}
-            transition:name="hero"
-          />
+        image.src ? (
+          <div class="pt-6 px-6">
+            <small class="text-xs font-normal uppercase text-[var(--text-gray)]">
+              {category}
+            </small>
+            <h4 class="font-[HelveticaNeueCyr] text-lg">{title}</h4>
+          </div>
+        ) : (
+          <div class="py-6 px-6">
+            <small class="text-xs font-normal uppercase text-[var(--text-gray)]">
+              {category}
+            </small>
+            <h4 class="font-[HelveticaNeueCyr] text-lg">{title}</h4>
+          </div>
         )
       }
+
+      <div class="flex items-center justify-center">
+        {
+          image.src && (
+            <Image src={image.src} alt={image.alt} width={500} height={500} />
+          )
+        }
+      </div>
     </div>
   </div>
 </a>
@@ -41,7 +50,6 @@ const { title, date, image, description, category } = post.frontmatter;
   .mouse-cursor-gradient-tracking {
     position: relative;
     background: var(--card-gray);
-    padding: 0.5rem 1rem;
     font-size: 1.2rem;
     color: white;
     cursor: pointer;

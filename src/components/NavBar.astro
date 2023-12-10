@@ -4,6 +4,33 @@ import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 ---
 
 <header
+  class="lg:flex justify-between items-center pt-5 pb-5 animate lg:py-9 lg:px-60 px-5 py-4">
+  <Astronav closeOnClick>
+    <div class="flex w-full lg:w-auto justify-between">
+      <a class="hvr-float hover:text-[var(--primary-green)]" href="/"
+        >Niel Montesa</a
+      >
+      <div class="block lg:hidden hover:text-[var(--primary-green)]">
+        <MenuIcon class="w-7 h-7 text-black-900" />
+      </div>
+    </div>
+    <MenuItems class="hidden lg:flex">
+      <ul class="flex flex-col lg:flex-row lg:gap-10">
+        <li class="hover:text-[var(--primary-green)] hvr-float">
+          <a href="/portfolio">Portfolio</a>
+        </li>
+        <li class="hover:text-[var(--primary-green)] hvr-float">
+          <a href="/journal">Journal</a>
+        </li>
+        <li class="hover:text-[var(--primary-green)] hvr-float">
+          <a href="/bio">Bio</a>
+        </li>
+      </ul>
+    </MenuItems>
+  </Astronav>
+</header>
+
+<!-- <header
   class="lg:flex justify-between items-center lg:py-9 lg:px-60 px-5 py-4 lg:text-sm">
   <Astronav closeOnClick>
     <div
@@ -28,7 +55,7 @@ import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
       </ul>
     </MenuItems>
   </Astronav>
-</header>
+</header> -->
 
 <style>
   * {

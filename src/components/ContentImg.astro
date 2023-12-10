@@ -1,0 +1,50 @@
+---
+import "../../styles/global.css";
+
+const { imgLink, imgAlt, descText, descLink } = Astro.props;
+---
+
+<div class="flex flex-col gap-2 my-12">
+  <a href={imgLink} target="_blank" data-fancybox>
+    <img
+      src={imgLink}
+      alt={imgAlt}
+      width={3000}
+      height={3000}
+      class="rounded-lg"
+    />
+    <a
+      href={descLink}
+      target="_blank"
+      class="text-center underline text-[var(--text-gray)] text-lg hover:text-[var(--primary-green)]">
+      <small>{descText}</small>
+    </a>
+  </a>
+</div>
+
+<style>
+  img {
+    box-shadow: 0px 4px 36.8px -22px rgb(149, 149, 149);
+  }
+</style>
+<script>
+  // Include Lightbox
+  import { Fancybox } from "@fancyapps/ui";
+  import "@fancyapps/ui/dist/fancybox/fancybox.css";
+  document.addEventListener("astro:page-load", () => {
+    Fancybox.bind("[data-fancybox]", {
+      contentClick: "toggleCover",
+      Images: {
+        Panzoom: {
+          panMode: "mousemove",
+          mouseMoveFactor: 1.1,
+          mouseMoveFriction: 0.12,
+        },
+      },
+    });
+  });
+
+  // document.addEventListener("astro:page-load", () => {
+
+  //   });
+</script>

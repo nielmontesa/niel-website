@@ -6,8 +6,6 @@ import JournalCard from "../components/JournalCard.astro";
 
 const journalPosts = await Astro.glob("./journal/*.mdx");
 const portPosts = await Astro.glob("./portfolio/*.mdx");
-
-import "../../styles/global.css";
 ---
 
 <Layout title="Niel Montesa // Designer">
@@ -38,7 +36,7 @@ import "../../styles/global.css";
     <div class="lg:col-span-6">
       <header>
         <h2 class="text-4xl lg:mt-12">Portfolio</h2>
-        <p class="lg:mt-3">
+        <p class="">
           Designs I helped create either from commercial or personal projects.
           (UI/UX case study currently in progress)
         </p>
@@ -67,16 +65,3 @@ import "../../styles/global.css";
     </div>
   </section>
 </Layout>
-<script>
-  const elements = document.querySelectorAll(".mouse-cursor-gradient-tracking");
-
-  elements.forEach((btn) => {
-    btn.addEventListener("mousemove", (e) => {
-      let rect = btn.getBoundingClientRect();
-      let x = e.clientX - rect.left;
-      let y = e.clientY - rect.top;
-      btn.style.setProperty("--x", x + "px");
-      btn.style.setProperty("--y", y + "px");
-    });
-  });
-</script>

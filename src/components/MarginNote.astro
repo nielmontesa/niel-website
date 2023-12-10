@@ -1,0 +1,79 @@
+---
+import "../../styles/global.css";
+
+const { bodyText, marginalNote, marginLink } = Astro.props;
+---
+
+<span class="note">
+  {bodyText}<label for="aside">*</label>
+  <span class="aside">
+    <label for="aside">*</label>
+    {
+      marginLink ? (
+        <a href={marginLink} target="_blank">
+          {marginalNote}
+        </a>
+      ) : (
+        <span> {marginalNote}</span>
+      )
+    }
+  </span>
+</span>
+
+<style>
+  .note:hover {
+    color: var(--primary-green);
+
+    .aside {
+      color: var(--primary-green);
+    }
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  /*Marginal Notes on Desktop*/
+  aside,
+  .aside {
+    display: inline;
+    float: right;
+    position: relative;
+    width: 20vw;
+    margin-right: -24vw;
+    font-size: 16px;
+    color: rgb(197, 197, 197);
+  }
+
+  /*Marginal Notes on mobile*/
+  @media (max-width: 1200px) {
+    aside,
+    .aside {
+      display: none;
+      float: none;
+      margin: 5% 10% 5% 10%;
+      width: 80%;
+      font-size: 16px;
+      color: rgb(197, 197, 197);
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var noteElement = document.querySelector(".note");
+
+    noteElement.addEventListener("click", function () {
+      if (window.innerWidth <= 1200) {
+        var asideElements = document.querySelectorAll("aside, .aside");
+
+        asideElements.forEach(function (aside) {
+          aside.style.display =
+            aside.style.display === "none" || aside.style.display === ""
+              ? "block"
+              : "none";
+        });
+      }
+    });
+  });
+</script>

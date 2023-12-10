@@ -24,12 +24,11 @@ const { title } = Astro.props;
   <body class="main text-base flex flex-col min-h-screen">
     <div class="noise"></div>
     <NavBar />
-    <main class="lg:px-60 px-5">
+    <main class="lg:px-60">
       <slot />
     </main>
     <Footer />
   </body>
-  <ViewTransitions />
   <script is:inline>
     document.addEventListener("astro:page-load", () => {
       const elements = document.querySelectorAll(
@@ -47,4 +46,5 @@ const { title } = Astro.props;
       });
     });
   </script>
+  <ViewTransitions />
 </html>

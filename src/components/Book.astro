@@ -1,0 +1,86 @@
+---
+import "../../styles/global.css";
+
+import { Image } from "astro:assets";
+
+const { bookTitle, bookAuthor, bookCover, bookDesc, grLink } = Astro.props;
+---
+
+<a href={grLink} target="_blank"
+  ><div
+    class="bg-black border-[#202020] border-[1px] rounded-[12px] p-[2px] shadow-md hover:shadow-gray-100/5 my-6 w-full h-full hvr-grow card mouse-cursor-gradient-tracking">
+    <div
+      class="bg-[var(--card-gray)]
+    border-[#202020]
+    border-[1px]
+    rounded-lg
+    p-6 flex gap-6">
+      <Image
+        src={bookCover}
+        alt={`Cover of ${bookTitle}`}
+        width={120}
+        height={120}
+        class="rounded lg:block hidden"
+      />
+      <div class="flex flex-col">
+        <h3 class="text-4xl text-white mb-auto">{bookTitle}</h3>
+        <small class="text-sm uppercase tracking-wider">by {bookAuthor}</small>
+        <p class="mt-auto text-sm">{bookDesc}</p>
+      </div>
+    </div>
+  </div>
+</a>
+<style>
+  .card {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    margin-bottom: 10px;
+    break-inside: avoid;
+  }
+  .mouse-cursor-gradient-tracking {
+    position: relative;
+    font-size: 1.2rem;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+  }
+  .mouse-cursor-gradient-tracking:before {
+    --size: 0;
+    content: "";
+    position: absolute;
+    left: var(--x);
+    top: var(--y);
+    width: var(--size);
+    height: var(--size);
+    background: radial-gradient(
+      circle closest-side,
+      rgba(107, 107, 107, 0.2),
+      transparent
+    );
+    transform: translate(-50%, -50%);
+    transition:
+      width 0.2s ease,
+      height 0.2s ease;
+  }
+
+  .mouse-cursor-gradient-tracking:hover:before {
+    --size: 500px;
+  }
+</style>
+<script is:inline>
+  document.addEventListener("astro:page-load", () => {
+    const elements = document.querySelectorAll(
+      ".mouse-cursor-gradient-tracking"
+    );
+
+    elements.forEach((btn) => {
+      btn.addEventListener("mousemove", (e) => {
+        let rect = btn.getBoundingClientRect();
+        let x = e.clientX - rect.left;
+        let y = e.clientY - rect.top;
+        btn.style.setProperty("--x", x + "px");
+        btn.style.setProperty("--y", y + "px");
+      });
+    });
+  });
+</script>

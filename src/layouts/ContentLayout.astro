@@ -1,38 +1,69 @@
 ---
 import Layout from "./Layout.astro";
-import { Img } from "astro-imagetools/components";
 
 import { Image } from "astro:assets";
 
 const { frontmatter } = Astro.props;
 
 const { title, date, image, description, category } = frontmatter;
+
+import "../../styles/content.css";
 ---
 
 <Layout title={title}>
-  <header>
-    <div class="container">
-      <h1>{title}</h1>
-      <p>{description}</p>
-      <p>{category}</p>
-      <p>Article</p>
-      {
-        image.src && (
-          <Image
-            src={image.src}
-            alt={image.alt}
-            width={400}
-            height={400}
-            transition:name="hero"
-          />
-        )
-      }
-    </div>
-  </header>
+  <section class="xl:px-80 px-1">
+    <header>
+      <div class="container">
+        <figure class="flex items-center justify-center">
+          {
+            image.src && (
+              <Image
+                src={image.src}
+                alt={image.alt}
+                width={500}
+                height={500}
+                transition:name="hero"
+              />
+            )
+          }
+        </figure>
+        <div class="text-7xl content-title leading-['1.5rem']">{title}</div>
+        <div class="text-lg mt-6 text-[var(--text-gray)]">{description}</div>
+        <hr class="mt-8 mb-4" />
+        <div class="lg:grid grid-cols-2 grid-rows-2 gap-2">
+          <div class="text-sm uppercase tracking-widest text-[#78DD8F]">
+            Journal
+          </div>
+          <div
+            class="lg: ml-auto text-sm uppercase tracking-widest text-[var(--text-gray)]">
+            posted 1 day ago
+          </div>
+          <div
+            class="text-sm uppercase tracking-widest text-[var(--text-gray)]">
+            {category}
+          </div>
+        </div>
+      </div>
+    </header>
 
-  <article>
-    <div class="content">
-      <slot />
-    </div>
-  </article>
+    <article>
+      <div class="content mt-12">
+        <slot />
+      </div>
+    </article>
+  </section>
 </Layout>
+
+<style></style>
+
+<style>
+  hr {
+    height: 2px;
+    border-width: 0;
+    background-color: #333;
+  }
+
+  h1 {
+    font-size: 3.75em;
+  }
+</style>

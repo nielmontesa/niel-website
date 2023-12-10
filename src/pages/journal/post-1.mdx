@@ -1,15 +1,59 @@
 ---
 layout: "../../layouts/ContentLayout.astro"
-title: A Post About Something
-date: 2023-11-20
-image: { src: "/images/post-1.png", alt: "A test picture." }
+title: Essential color theory every web designer needs to know
+date: 2023-12-6
+image:
+  { src: "/images/content/journal/post-1/post-1.png", alt: "A test picture." }
 description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque soluta voluptatum earum."
-category: UX Design
+category: Visual Design
 ---
 
-## Test
+import ContentImg from "../../components/ContentImg.astro";
+import Quote from "../../components/Quote.astro";
+import MarginNote from "../../components/MarginNote.astro";
+import Book from "../../components/Book.astro";
+import EmpCard from "../../components/EmpCard.astro";
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque soluta voluptatum earum. Omnis quos perspiciatis ipsum voluptates architecto molestiae, qui neque iure quo dolore nam asperiores pariatur aperiam harum quaerat.
-Expedita voluptate facilis repellendus? Minus nemo beatae explicabo minima animi expedita, assumenda vitae illum repudiandae magnam voluptas ipsa eos, tempora quibusdam dolore nisi doloremque unde iure quaerat delectus, voluptatum quas?
-Soluta accusamus vero quaerat tempora amet iste nesciunt pariatur, earum blanditiis suscipit tempore impedit debitis itaque, voluptatum veritatis, sed exercitationem. Modi, officia sunt? Vel quia nihil enim odit ipsum quasi?
-Nostrum laudantium suscipit deleniti repellendus cum sint sequi ullam unde nesciunt mollitia nam consectetur reiciendis, blanditiis dignissimos dolorem esse aspernatur totam repellat in ut. Necessitatibus ducimus ratione labore quam repellat.
+<ContentImg
+  imgLink="../../../images/content/journal/post-1/chips.jpg"
+  imgAlt="A rack of chips."
+  descText="Flickr"
+  descLink="https://www.flickr.com/photos/jeepersmedia/49450153392/in/album-72157702500701712/"
+/>
+
+<Quote
+  quote="Color is a power which directly influences the soul."
+  quotee="Wassily Kandinsky"
+/>
+
+<MarginNote
+  bodyText="Color is one of those things that has an intrinsic involvement in our lives."
+  marginalNote={"This is a study relating to this."}
+  marginLink=""
+/> Your twelve-year-old self probably had a favorite color — mine was green because
+I watched too much Ninja Turtles.
+
+Every time I think of the color green now, I find myself missing my childhood, recalling all the times I woke up early to watch my favorite cartoon reptiles. Even though that’s what I feel for the color green, it might not be the same for you. Why is that?
+
+<Book
+  bookTitle="Graphic Design: The New Basics"
+  bookAuthor="Ellen Lupton"
+  bookCover="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1348622667i/2211399.jpg"
+  bookDesc="In this groundbreaking new primer, leading design educator and historian Ellen Lupton provides clear and concise guidance for anyone learning or brushing up on their typographic skills."
+  grLink="https://www.goodreads.com/book/show/2211399.Graphic_Designs"
+/>
+
+<EmpCard
+  cardTitle="Remember"
+  cardBody="Every time I think of the color green now, I find myself missing my childhood, recalling all the times I woke up early to watch my favorite cartoon reptiles. Even though that’s what I feel for the color green, it might not be the same for you. Why is that?"
+/>
+
+# Why do colors make you feel?
+
+Color is one of those things that has an intrinsic involvement in our lives. Your twelve-year-old self probably had a favorite color — mine was green because I watched too much Ninja Turtles.
+
+Every time I think of the color green now, I find myself missing my childhood, recalling all the times I woke up early to watch my favorite cartoon reptiles. Even though that’s what I feel for the color green, it might not be the same for you. Why is that?
+
+## The importance of context
+
+Color can represent many different things — emotions, culture, ideologies, etc. We usually build these connections in our heads from prior knowledge and memories. The color green might evoke nostalgia for me, but for you, it might represent something entirely different — the usual associations with green are money, luck, or health.
