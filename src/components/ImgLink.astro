@@ -1,0 +1,26 @@
+---
+import "../../styles/global.css";
+
+import { Image } from "astro:assets";
+
+const { imgLink, imgSrc, imgAlt } = Astro.props;
+---
+
+<a class="hvr-grow" href={imgLink} target="_blank">
+  <Image
+    src={imgSrc}
+    alt={imgAlt}
+    height={120}
+    width={120}
+    class="rounded-lg"
+  /></a
+>
+
+<style>
+  a {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    margin-bottom: 10px;
+    break-inside: avoid;
+  }
+</style>

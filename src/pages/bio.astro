@@ -4,35 +4,119 @@ import Click from "../components/Click.astro";
 import { Image } from "astro:assets";
 import nielPhoto from "../../public/images/niel_opaque.png";
 import Icon from "astro-icon";
+
+import ImgLink from "../components/ImgLink.astro";
+import ReadBooks from "../components/ReadBooks.astro";
+import WantBooks from "../components/WantBooks.astro";
 ---
 
 <Layout title="Niel Montesa // Bio">
   <main class="text-base">
     <div class="flex items-center justify-left mb-5 mt-12">
-      <h2 class="text-5xl">Bio</h2>
+      <h2 class="text-5xl">Who am I?</h2>
       <Image src={nielPhoto} alt="Niel's Photo" width={55} />
     </div>
-    <section class="grid grid-cols-3 grid-rows-2 gap-16">
-      <p>
-        Any designer will tell you that choosing colors can be hard — especially
-        for personal projects where there isn’t an existing design system to
-        copy hex codes from. Along with its difficulty, it is also highly
-        important. <br />
-        <br />Color is one of the first things that users will see and associate
-        your brand with. In a 7-Eleven, you don’t browse the chips section
-        looking for the word ‘Cheetos’, you first look for the bright orange
-        bag.
+    <section class="xl:grid grid-cols-3 gap-16">
+      <p class="text-[#E0E0E0]">
+        I spend most of my days doing three things: designing, developing, and
+        writing about the first two. It's hard for me to give myself a formal
+        title but for the sake of brevity, I am a <span
+          class="text-white font-medium">designer</span
+        >.<br />
+        <br />
+         My skills fall under the scope of UI design, graphic design, and
+        front-end development. With a dash of writing and brand nesign added on
+        top. I am also currently studying UX design. Read about my UX journey <a
+          class="text-[var(--primary-green)] hover:text-[var(--secondary-green)] underline"
+          href="#">here</a
+        >.
       </p>
-      <p>
-        Any designer will tell you that choosing colors can be hard — especially
-        for personal projects where there isn’t an existing design system to
-        copy hex codes from. Along with its difficulty, it is also highly
-        important. <br />
-        <br />Color is one of the first things that users will see and associate
-        your brand with. In a 7-Eleven, you don’t browse the chips section
-        looking for the word ‘Cheetos’, you first look for the bright orange
-        bag.
+      <p class="text-[#E0E0E0]">
+        As I write this, I am currently working as a freelance Writer and
+        Graphic Designer for ShineBright. I am also working towards my BS
+        Information Technology degree, set to graduate in 2025. <a
+          class="text-[var(--primary-green)] hover:text-[var(--secondary-green)] underline"
+          href="#">Read my CV.</a
+        ><br />
+        <br />On the side, I am a struggling musician. I play guitar, bass,
+        ukelele, and I sing! I write and produce moody rock songs that help me
+        cope with my workaholic tendencies. Or at least I try to.
       </p>
+      <p class="text-[#E0E0E0]">
+        Want to see what I’m currently up to? You can check out my <a
+          class="text-[var(--primary-green)] hover:text-[var(--secondary-green)] underline"
+          href="#">Now</a
+        > page for irregular updates on whatever I’m obsessed with at the
+        moment.
+      </p>
+    </section>
+    <section class="xl:grid grid-cols-3 gap-16 mt-32">
+      <div class="text-[#E0E0E0]">
+        <p class="font-bold">Some Books I've Read and Currently Reading</p>
+        <div class="flex flex-wrap gap-2 mt-3">
+          <ReadBooks />
+        </div>
+      </div>
+      <div class="text-[#E0E0E0]">
+        <p class="font-bold xl:m-auto mt-12">Some Books I want to Read</p>
+        <div class="flex flex-wrap gap-2 mt-3">
+          <WantBooks />
+        </div>
+      </div>
+      <div class="text-[#E0E0E0]">
+        <p class="font-bold mb-3 xl:m-auto mt-12">Other Stuff I love</p>
+        <div class="flex flex-wrap gap-2 mt-3">
+          <iframe
+            class="hvr-grow"
+            style="border-radius:12px"
+            src="https://open.spotify.com/embed/album/2DIpgoeZAbwk3wF1qSDj8v?utm_source=generator"
+            width="100%"
+            height="152"
+            frameBorder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"></iframe>
+          <iframe
+            style="border-radius:12px"
+            src="https://open.spotify.com/embed/album/45StnugV9WQMQwk4rRoTy8?utm_source=generator"
+            width="100%"
+            height="152"
+            frameBorder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"></iframe>
+          <ImgLink
+            imgLink="https://letterboxd.com/film/there-will-be-blood/"
+            imgSrc="https://a.ltrbxd.com/resized/sm/upload/jg/cd/7y/f5/there%20will%20be%20blood-0-500-0-750-crop.jpg?v=8a533d5350"
+            imgAlt="There Will Be Blood"
+          />
+          <ImgLink
+            imgLink="https://letterboxd.com/film/blade-runner/"
+            imgSrc="https://a.ltrbxd.com/resized/sm/upload/85/io/38/dz/vfzE3pjE5G7G7kcZWrA3fnbZo7V-0-500-0-750-crop.jpg?v=0d5de70f0d"
+            imgAlt="Blade Runner"
+          />
+          <ImgLink
+            imgLink="https://letterboxd.com/film/the-batman/"
+            imgSrc="https://a.ltrbxd.com/resized/film-poster/3/4/8/9/1/4/348914-the-batman-0-500-0-750-crop.jpg?v=ec12a8b7ce"
+            imgAlt="The Batman"
+          />
+          <ImgLink
+            imgLink="https://letterboxd.com/film/fantastic-mr-fox/"
+            imgSrc="https://a.ltrbxd.com/resized/film-poster/4/6/3/4/4/46344-fantastic-mr-fox-0-500-0-750-crop.jpg?v=3a2a858065"
+            imgAlt="Fantastic Mr. Fox"
+          />
+          <ImgLink
+            imgLink="https://letterboxd.com/film/punch-drunk-love/"
+            imgSrc="https://a.ltrbxd.com/resized/film-poster/4/7/9/1/4/47914-punch-drunk-love-0-500-0-750-crop.jpg?v=032fc20313"
+            imgAlt="Punch Drunk Love"
+          />
+          <ImgLink
+            imgLink="https://letterboxd.com/film/the-lighthouse-2019/"
+            imgSrc="https://a.ltrbxd.com/resized/film-poster/4/3/3/8/6/3/433863-the-lighthouse-0-500-0-750-crop.jpg?v=ee97005537"
+            imgAlt="The Lighthouse"
+          />
+        </div>
+      </div>
     </section>
   </main>
 </Layout>

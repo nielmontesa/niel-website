@@ -9,7 +9,7 @@ const portPosts = await Astro.glob("./portfolio/*.mdx");
 ---
 
 <Layout title="Niel Montesa // Designer">
-  <div class="hero-section lg:py-32 py-16 pulse">
+  <div class="hero-section lg:py-24 py-16 pulse">
     <p class="lg:text-7xl text-5xl header-intro font-normal">
       Hello stranger, my name is <em>Niel</em> — I like designing and developing
       user-centered interfaces.
@@ -21,21 +21,18 @@ const portPosts = await Astro.glob("./portfolio/*.mdx");
       for a data science startup.
     </p>
     <div class="mt-6">
-      <Click
-        linkText="• Open for freelance work!"
-        textColor="text-[var(--primary-green)]"
-      />
+      <Click linkText="• Open for freelance work!" textColor="text-[#B9B9B9]" />
       <Click
         linkText="• Currently searching for UI/UX internships!"
-        textColor="text-[var(--secondary-green)]"
+        textColor="text-[#B9B9B9]"
       />
     </div>
   </div>
 
-  <section class="grid grid-cols-1 lg:grid-cols-8 gap-12">
-    <div class="lg:col-span-6">
+  <section class="grid grid-cols-1 xl:grid-cols-8 gap-12">
+    <div class="xl:col-span-6">
       <header>
-        <h2 class="text-4xl lg:mt-12">Portfolio</h2>
+        <h2 class="text-4xl xl:mt-12">Portfolio</h2>
         <p class="">
           Designs I helped create either from commercial or personal projects.
           (UI/UX case study currently in progress)
@@ -43,22 +40,22 @@ const portPosts = await Astro.glob("./portfolio/*.mdx");
       </header>
 
       <div class="grid">
-        <div class="mt-8 columns-1 lg:columns-2 gap-3">
+        <div class="mt-8 columns-1 xl:columns-2 gap-3">
           {portPosts.map((post) => <JournalCard {post} />)}
         </div>
       </div>
     </div>
-    <div class="lg:col-span-2">
+    <div class="xl:col-span-2">
       <header>
-        <h2 class="text-4xl lg:mt-12">Journal</h2>
-        <p class="lg:mt-3">
+        <h2 class="text-4xl xl:mt-12">Journal</h2>
+        <p class="xl:mt-3">
           Designs I helped create either from commercial or personal projects.
           (UI/UX case study currently in progress)
         </p>
       </header>
 
       <div class="grid">
-        <div class="mt-8 columns-1 lg:columns-1 gap-3">
+        <div class="mt-8 columns-1 xl:columns-1 gap-3">
           {journalPosts.map((post) => <JournalCard {post} />)}
         </div>
       </div>

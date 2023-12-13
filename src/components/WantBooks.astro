@@ -1,0 +1,19 @@
+---
+import ImgLink from "./ImgLink.astro";
+
+("https://openlibrary.org/works/OL45804W.json");
+
+const data = await fetch(
+  `https://openlibrary.org/people/niel_montesa/books/want-to-read.json`
+).then((response) => response.json());
+---
+
+{
+  data["reading_log_entries"].map((book) => (
+    <ImgLink
+      imgLink={`https://openlibrary.org/${book["work"]["key"]}`}
+      imgSrc={`https://covers.openlibrary.org/b/olid/${book["work"]["cover_edition_key"]}-L.jpg`}
+      imgAlt={book["work"]["title"]}
+    />
+  ))
+}
