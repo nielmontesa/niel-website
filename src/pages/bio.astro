@@ -11,12 +11,12 @@ import WantBooks from "../components/WantBooks.astro";
 ---
 
 <Layout title="Niel Montesa // Bio">
-  <main class="text-base">
+  <main>
     <div class="flex items-center justify-left mb-5 mt-12">
       <h2 class="text-5xl">Who am I?</h2>
       <Image src={nielPhoto} alt="Niel's Photo" width={55} />
     </div>
-    <section class="xl:grid grid-cols-3 gap-16">
+    <section class="xl:grid grid-cols-3 gap-16 text-lg">
       <p class="text-[#E0E0E0]">
         I spend most of my days doing three things: designing, developing, and
         writing about the first two. It's hard for me to give myself a formal
@@ -25,22 +25,22 @@ import WantBooks from "../components/WantBooks.astro";
         >.<br />
         <br />
          My skills fall under the scope of UI design, graphic design, and
-        front-end development. With a dash of writing and brand nesign added on
+        front-end development. With a dash of writing and brand design added on
         top. I am also currently studying UX design. Read about my UX journey <a
           class="text-[var(--primary-green)] hover:text-[var(--secondary-green)] underline"
           href="#">here</a
         >.
       </p>
-      <p class="text-[#E0E0E0]">
+      <p class="text-[#E0E0E0] lg:mt-0 mt-8">
         As I write this, I am currently working as a freelance Writer and
         Graphic Designer for ShineBright. I am also working towards my BS
         Information Technology degree, set to graduate in 2025. <a
           class="text-[var(--primary-green)] hover:text-[var(--secondary-green)] underline"
           href="#">Read my CV.</a
         ><br />
-        <br />On the side, I am a struggling musician. I play guitar, bass,
-        ukelele, and I sing! I write and produce moody rock songs that help me
-        cope with my workaholic tendencies. Or at least I try to.
+        <br />On the side, I am a musician. I play guitar, bass, ukelele, and I
+        sing! I write and produce moody rock songs that help me cope with my
+        workaholic tendencies. Or at least I try to.
       </p>
       <p class="text-[#E0E0E0]">
         Want to see what I’m currently up to? You can check out my <a
@@ -50,7 +50,7 @@ import WantBooks from "../components/WantBooks.astro";
         moment.
       </p>
     </section>
-    <section class="xl:grid grid-cols-3 gap-16 mt-32">
+    <section class="xl:grid grid-cols-3 gap-16 xl:mt-24 mt-12 text-lg">
       <div class="text-[#E0E0E0]">
         <p class="font-bold">Some Books I've Read and Currently Reading</p>
         <div class="flex flex-wrap gap-2 mt-3">
@@ -58,7 +58,7 @@ import WantBooks from "../components/WantBooks.astro";
         </div>
       </div>
       <div class="text-[#E0E0E0]">
-        <p class="font-bold xl:m-auto mt-12">Some Books I want to Read</p>
+        <p class="font-bold xl:m-auto mt-12">Some Books I Want to Read</p>
         <div class="flex flex-wrap gap-2 mt-3">
           <WantBooks />
         </div>
