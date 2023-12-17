@@ -1,0 +1,261 @@
+---
+layout: "../../layouts/ContentLayout.astro"
+title: How to use gradients effectively in your web design projects
+date: 2023-12-6
+image:
+  { src: "/images/content/journal/post-2/cover.png", alt: "Colored circles." }
+category: Visual Design
+---
+
+import ContentImg from "../../components/ContentImg.astro";
+import Quote from "../../components/Quote.astro";
+import MarginNote from "../../components/MarginNote.astro";
+import Book from "../../components/Book.astro";
+import EmpCard from "../../components/EmpCard.astro";
+
+Using gradients is an excellent way to add energy and movement to your designs. In this article, we’ll look at gradients, how to use them effectively, and how to create them in Figma and CSS.
+
+# Gradients are back in style
+
+Like mom jeans, mullets, and polaroids, several trends that have seemingly drowned in our culture have been starting to emerge in the 21st century. UI design isn’t an exemption, creative techniques used in several design movements from the 20th century are being used in websites today.
+
+The use of **huge type** is heavily inspired by a lot of the posters in the **Swiss design movement** that happened in the 1950s until the 1980s.
+
+<ContentImg
+  imgLink="../../../images/content/journal/post-2/img-1.jpg"
+  imgAlt="A poster by by Josef Müller-Brockmann, the title uses a very large font."
+  descText="Poster by Josef Müller-Brockmann, using blown-up type for the title"
+/>
+
+<ContentImg
+  imgLink="https://miro.medium.com/v2/resize:fit:700/1*cqO0iSZroYnzuoP1Fn9LQg.png"
+  imgAlt="National Parks website using huge type"
+  descText="National Parks website using huge type"
+  descLink="https://nationalparks.joe8lee.com/"
+/>
+
+**Neubrutalism** is weirdly based on an architectural design movement that occurred in the 1950s and lasted until the 1970s.
+
+<ContentImg
+  imgLink="https://miro.medium.com/v2/resize:fit:700/1*pamUSL4j6pavY1sVerLkaQ.png"
+  imgAlt="Brutalism Architecture (The Balfron Tower in London)"
+  descText="The Balfron Tower in London"
+  descLink="https://en.wikipedia.org/wiki/Balfron_Tower"
+/>
+
+<ContentImg
+  imgLink="https://miro.medium.com/v2/resize:fit:700/1*Fdm5F_pjcn6WSwxqzpwWXg.png"
+  imgAlt="Neubrutalism design"
+  descText="Neubrutalism design"
+  descLink="https://antidote.email/"
+/>
+
+The most interesting trend to go back in style though, is one that didn’t go popular until after the 20th century. **Gradients** were big in web design back in the late 2000s, but it slowly disappeared in the 2010s when flat design grew in popularity.
+
+Today, flat design is still very prominent but gradients are now being used in combination to provide flat elements with more energy and depth (also known as flat 2.0). Gradients don’t only provide your designs with more visual intrigue, it can also help make them accessible and user-friendly.
+
+So how can you incorporate gradients effectively in your designs? First, you’d need to understand how they are created.
+
+# What are gradients?
+
+Gradients happen when one color gradually transitions into another.
+
+<ContentImg
+  imgLink="https://miro.medium.com/v2/resize:fit:700/1*gw_HHOi-aUz0sbOZFPhYfg.png"
+  imgAlt="Example of a Linear Gradient."
+  descText="Linear Gradient"
+  descLink=""
+/>
+
+In the example above, the green on the bottom left slowly transforms into the yellow on the top right. This is also an example of a **linear gradient —** where the initial color and the second color are in opposite directions.
+
+<ContentImg
+  imgLink="https://miro.medium.com/v2/resize:fit:700/1*7rHmMZpINMMZpheR6RwVoA.png"
+  imgAlt="Example of a Radial Gradient."
+  descText="Radial Gradient"
+  descLink=""
+/>
+
+Another type is the **radial gradient.** This is when a color in the center, like the red in the example above, transitions outward to another color.
+
+<ContentImg
+  imgLink="https://miro.medium.com/v2/resize:fit:700/1*TQBW5rMfs7QJx7nXA9Oh8Q.png"
+  imgAlt="Example of Angular Gradient."
+  descText="Angular Gradient"
+  descLink=""
+/>
+
+The colors in an **angular gradient** or a **conic gradient** (the term used in CSS) transition in angles rotating around the center point.
+
+<ContentImg
+  imgLink="https://miro.medium.com/v2/resize:fit:700/1*TIdSJYjxlSYZmnBEcP7N8g.png"
+  imgAlt="Example of a Diamond Gradient."
+  descText="Diamond Gradient"
+  descLink=""
+/>
+
+Like a radial gradient, the initial color in a **diamond gradient** radiates outwards. But the difference is that the color goes outward in only four directions, forming a diamond shape.
+
+<ContentImg
+  imgLink="https://miro.medium.com/v2/resize:fit:700/1*AsR4OQzsxryRLFCP6IW9OQ.png"
+  imgAlt="An example of a mesh gradient."
+  descText="Mesh Gradient"
+  descLink=""
+/>
+
+**Mesh gradients** are composed of several _mesh points._ The colors on these points gradually transition into each other. Unlike the other types, mesh gradients don’t lock your colors in a certain position. It gives you more freedom on what you want it to look like.
+
+Now that you know the boring technical stuff, it’s time to learn how to make these beautiful gradients yourself.
+
+# Creating gradients using Figma
+
+<ContentImg
+  imgLink="https://miro.medium.com/v2/resize:fit:700/1*uHkbf-JhCwJnY_ycwbHhWg.png"
+  imgAlt="Screenshot of Figma’s gradient selection UI."
+  descText="Figma’s gradient selection UI"
+  descLink=""
+/>
+
+Creating gradients in **Figma** is straightforward:
+
+- Click on an element.
+- Under the fill property, click on an existing color.
+- On the menu that appears, click on the gradient icon on the upper side.
+- Select one of the four available gradient types (**linear, radial, angular, and diamond**)
+- Adjust your colors!
+
+For **mesh gradients**, you are going to need to use a [**plugin**](https://www.figma.com/community/plugin/958202093377483021/Mesh-Gradient)**.**
+
+<ContentImg
+  imgLink="https://miro.medium.com/v2/resize:fit:700/1*zoDhHudY8JgIH2kuPMcFMw.png"
+  imgAlt="A screenshot of the Figma Plugin “Mesh Gradient”."
+  descText="Figma Plugin “Mesh Gradient”"
+  descLink=""
+/>
+
+This plugin created by [**@gautham**](https://www.figma.com/@gautham) provides you with a simple editor where you can freely drag the mesh points around. It also gives you the option to randomize the colors when you’re feeling a little uninspired.
+
+When you’re done creating your mesh gradient, just click generate and it will insert a shape with the gradient on your canvas.
+
+# Creating gradients using CSS
+
+You don’t need to be a front-end genius to be able to create gradients in CSS. The syntax is not that complicated!
+
+When creating **linear gradients**:
+
+/_ CSS Format _/  
+background-image: linear-gradient(angle, color-stop1, color-stop2);  
+/_ Linear Gradient Example _/  
+background-image: linear-gradient(90deg, yellow, blue);
+
+The example above will produce this gradient:
+
+<ContentImg
+  imgLink="https://miro.medium.com/v2/resize:fit:700/1*64kVEN2CaAfzzgbPLW4ygg.png"
+  imgAlt="A photo of a 90 degree linear gradient, yellow to blue."
+  descText="90 degree linear gradient, yellow to blue"
+  descLink=""
+/>
+
+To create **radial gradients** and **angular/conic** gradients:
+
+/_ Radial Gradients Format _/  
+background-image: radial-gradient(shape size at position, start-color, ..., last-color);  
+/_ Angular/Conic Gradients Format_/  
+background-image: conic-gradient([from angle] [at position,] color [degree], color [degree], ...);
+
+Creating **mesh gradients** uses a combination of radial gradients to create its unique visual effect. Although this can be done manually, a tool called [Mesher by CSS Hero](https://csshero.org/mesher/) can speed things up a lot:
+
+<ContentImg
+  imgLink="https://miro.medium.com/v2/resize:fit:700/1*s98Y9Qak4IX43m3uTiQhxw.png"
+  imgAlt="A screenshot of the tool Mesher by CSS HERO."
+  descText="[Mesher by CSS Hero](https://csshero.org/mesher/)"
+  descLink=""
+/>
+
+Like the previous Figma plugin, this gives you a freeform editor where you can drag all of the mesh points around. When you’re happy with your mesh gradient, you can click export on the bottom right corner and it will allow you to copy the CSS.
+
+You now know how to create beautiful gradients!
+
+To learn how to use the gradients you created effectively, we use the **best method in learning design: observing how talented designers use it.**
+
+# Using gradients in backgrounds
+
+<ContentImg
+  imgLink="https://miro.medium.com/v2/resize:fit:1000/1*sld5_wv7o1h1v50Bo8brVA.png"
+  imgAlt="Monograph Communications’s website uses a mesh gradient."
+  descText="Monograph Communications"
+  descLink="https://www.monographcomms.ca/"
+/>
+
+[Monograph Communications](https://www.monographcomms.ca/)’s website uses a mesh gradient with an analogous color harmony as its background. Using different variations of purple and red creates a soothing atmosphere for the website. It gives the design personality without being too distracting, shifting the user’s attention to the content.
+
+<ContentImg
+  imgLink="https://miro.medium.com/v2/resize:fit:1000/1*6EaWmXs7s16L1TXpt0yEhw.png"
+  imgAlt="Screenshot Antara Studio’s website. It uses a subtle gradient background."
+  descText="Antara Studio"
+  descLink="https://antara.studio/"
+/>
+
+Another application of a non-distracting gradient background is on [Antara Studio](https://antara.studio/)’s website. This is a more subtle gradient, with gray being the dominating color, transitioning into small splashes of yellow and black.
+
+# Using gradients in buttons
+
+<ContentImg
+  imgLink="https://miro.medium.com/v2/resize:fit:1000/1*d37ycdhDnUy6XNj_2HptxA.png"
+  imgAlt="Screenshot of JLo Beauty’s website."
+  descText="JLo Beauty"
+  descLink="https://www.jlobeauty.com/"
+/>
+
+On [JLo Beauty](https://www.jlobeauty.com/)’s website, the button has a gradient that mimics the sleek packaging of the products that they sell. Not only does this promote branding consistency but it’s also a brilliant way to use gradients as **focal points.**
+
+[**Focal points** are any element that you want to shift attention to.](https://www.smashingmagazine.com/2015/02/design-principles-dominance-focal-points-hierarchy/#:~:text=Focal%20points%20are%20also%20elements%20or%20areas%20of%20dominance%2C%20just%20not%20to%20the%20same%20degree%20as%20your%20one%20dominant%20element%2C%20which%20could%20be%20defined%20as%20your%20most%20dominant%20focal%20point.%20Focal%20points%20are%20areas%20of%20interest%2C%20emphasis%20or%20difference%20within%20a%20composition%20that%20capture%20and%20hold%20the%20viewer%E2%80%99s%20attention.) Gradients using contrasting colors can be very eye-catching since they create a sense of movement and energy. The colors they use for the button’s gradient are monochrome, using contrasting variations of brown.
+
+<ContentImg
+  imgLink="https://miro.medium.com/v2/resize:fit:1000/1*v_jjzX7iP36O1iSmB3Pu-Q.gif"
+  imgAlt="Screenshot of JLo Beauty’s website."
+  descText="JLo Beauty"
+  descLink="https://www.jlobeauty.com/"
+/>
+
+The elegant vibe that they are trying to capture is reinforced by adding an animation to the button. They create this shiny effect by moving the color stops of the gradient.
+
+This is a good method of using gradients and motion to promote usability. But there are other ways to do this — so let’s explore other examples:
+
+# Using gradients with motion
+
+<ContentImg
+  imgLink="https://miro.medium.com/v2/resize:fit:1000/1*enz5miXl6osknG7deyxmPA.gif"
+  imgAlt="Screenshot of PrismData’s website."
+  descText="PrismData"
+  descLink="https://www.prismdata.com/"
+/>
+
+[PrismData](https://www.prismdata.com/)’s website has three orbs floating around on the pitch black background. Even though the design choice doesn’t offer any kind of benefit in terms of usability, it gives the website personality which is crucial in developing brand identity.
+
+<ContentImg
+  imgLink="https://miro.medium.com/v2/resize:fit:1000/1*9SpyCw46KG2CFNnVXnjhZA.gif"
+  imgAlt="A gif of the website of Zeus Jones. It uses a moving gradient background."
+  descText="Zeus Jones"
+  descLink="https://zeusjones.com/"
+/>
+
+The website of [Zeus Jones](https://zeusjones.com/) pushes the boundary of using gradients in web design. Like the previous example, the noisy animated background isn’t really in line with the rules of usability — but it showcases the talent of the brand and frankly, it’s just fun as hell to look at.
+
+# Using gradients in type
+
+<ContentImg
+  imgLink="https://miro.medium.com/v2/resize:fit:1000/1*G3qEc5jy6KFKIzFUia2iLg.gif"
+  imgAlt="A screenshot of Richard Sancho’s website. It uses gradients in the type."
+  descText="Richard Sancho"
+  descLink="https://www.richardsancho.com/"
+/>
+
+[Richard Sancho](https://www.richardsancho.com/)’s website combines two design trends: gradients and huge type. The moving gradient in the background changes the colors in the type as well, making for a very interesting hero section. This is another example of an outlandish design decision that somehow works.
+
+# Gradients are here to stay
+
+Anyone active in Behance or Dribbble will agree with me when I say that gradients are not going away anytime soon. With the number of people incorporating gradients one way or another in their client work and portfolios, it seems that it’s going to stick around for a while.
+
+You don’t need to go extravagant with gradients like the websites from [Richard Sancho](https://www.richardsancho.com/) and [Zeus Jones](https://zeusjones.com/). Using them in a more subtle way can improve your design substantially — more points if you incorporate them intending to improve your design’s usability!

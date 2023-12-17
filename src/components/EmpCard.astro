@@ -4,10 +4,7 @@ import "../../styles/global.css";
 const { cardTitle, cardBody } = Astro.props;
 ---
 
-<div
-  class="my-6 bg-black border-[#202020] border-[1px] rounded-[12px] p-[2px] shadow-md shadow-gray-100/5">
-  <div class="bg-[#262626] border-[#202020] border-[1px] rounded-lg p-6">
-    <small class="uppercase text-xs text-[#9F9F9F]">{cardTitle}</small>
-    <div class="text-[#E0E0E0] text-lg mt-2">{cardBody}</div>
-  </div>
+<div class="bg-[#262626] border-[#202020] border-[1px] rounded-lg p-6">
+  <small class="uppercase text-xs text-[#9F9F9F]">{cardTitle}</small>
+  <div class="text-[#E0E0E0] text-lg mt-2">{cardBody}</div>
 </div>

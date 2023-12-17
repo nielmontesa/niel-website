@@ -6,7 +6,7 @@ const { bodyText, marginalNote, marginLink } = Astro.props;
 
 <span class="note">
   {bodyText}<label for="aside">*</label>
-  <span class="aside">
+  <span class="aside text-sm">
     <label for="aside">*</label>
     {
       marginLink ? (
@@ -39,9 +39,8 @@ const { bodyText, marginalNote, marginLink } = Astro.props;
     display: inline;
     float: right;
     position: relative;
-    width: 20vw;
-    margin-right: -24vw;
-    font-size: 16px;
+    width: 10vw;
+    margin-right: -15vw;
     color: rgb(197, 197, 197);
   }
 

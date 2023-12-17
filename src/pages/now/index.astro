@@ -1,0 +1,28 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+import RecordLayout from "../../layouts/RecordLayout.astro";
+
+const allPosts = await Astro.glob("./*.mdx");
+---
+
+<Layout title="Niel Montesa // Now">
+  <section>
+    <header>
+      <h2 class="text-5xl lg:mt-12">Now</h2>
+      <p class="lg:mt-3 text-lg">
+        Irregular updates on whatever I’m obsessed with at the moment.
+      </p>
+    </header>
+
+    <div class="mt-8">
+      {
+        allPosts.map((post) => (
+          <RecordLayout>
+            <post.Content />
+          </RecordLayout>
+        ))
+      }
+    </div>
+  </section>
+</Layout>

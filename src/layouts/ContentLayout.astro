@@ -11,7 +11,7 @@ import "../../styles/content.css";
 ---
 
 <Layout title={title}>
-  <section class="xl:px-52 px-1 p-24">
+  <section class="2xl:px-80 md:px-70 px-1">
     <header>
       <div class="container">
         <figure class="flex items-center justify-center">
@@ -27,7 +27,9 @@ import "../../styles/content.css";
             )
           }
         </figure>
-        <div class="text-7xl content-title leading-['1.5rem']">{title}</div>
+        <div class="xl:text-7xl text-5xl content-title leading-['1.5rem']">
+          {title}
+        </div>
         <div class="text-lg mt-6 text-[var(--text-gray)]">{description}</div>
         <hr class="mt-8 mb-4" />
         <div class="lg:grid grid-cols-2 grid-rows-2 gap-2">
@@ -54,8 +56,6 @@ import "../../styles/content.css";
   </section>
 </Layout>
 
-<style></style>
-
 <style>
   hr {
     height: 2px;
@@ -67,3 +67,14 @@ import "../../styles/content.css";
     font-size: 3.75em;
   }
 </style>
+<script>
+  !(function () {
+    for (
+      var e = document.body.getElementsByTagName("a"), t = e.length, n = 0;
+      n < t;
+      n++
+    )
+      new URL(e[n].href).origin !== location.origin &&
+        e[n].setAttribute("target", "_blank");
+  })();
+</script>

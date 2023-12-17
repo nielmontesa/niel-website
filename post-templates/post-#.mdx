@@ -1,0 +1,49 @@
+---
+layout: "../../layouts/ContentLayout.astro"
+title: Essential color theory every web designer needs to know
+date: 2023-12-6
+image:
+  { src: "/images/content/journal/post-1/post-1.png", alt: "A test picture." }
+description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque soluta voluptatum earum."
+category: Visual Design
+---
+
+import ContentImg from "../../components/ContentImg.astro";
+import Quote from "../../components/Quote.astro";
+import MarginNote from "../../components/MarginNote.astro";
+import Book from "../../components/Book.astro";
+import EmpCard from "../../components/EmpCard.astro";
+
+<ContentImg
+  imgLink="../../../images/content/journal/post-1/chips.jpg"
+  imgAlt="A rack of chips."
+  descText="Flickr"
+  descLink="https://www.flickr.com/photos/jeepersmedia/49450153392/in/album-72157702500701712/"
+/>
+
+<Quote
+  quote="Color is a power which directly influences the soul."
+  quotee="Wassily Kandinsky"
+/>
+
+<MarginNote
+  bodyText="Color is one of those things that has an intrinsic involvement in our lives."
+  marginalNote={"This is a study relating to this."}
+  marginLink=""
+/> Your twelve-year-old self probably had a favorite color — mine was green because
+I watched too much Ninja Turtles.
+
+Every time I think of the color green now, I find myself missing my childhood, recalling all the times I woke up early to watch my favorite cartoon reptiles. Even though that’s what I feel for the color green, it might not be the same for you. Why is that?
+
+<Book
+  bookTitle="Graphic Design: The New Basics"
+  bookAuthor="Ellen Lupton"
+  bookCover="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1348622667i/2211399.jpg"
+  bookDesc="In this groundbreaking new primer, leading design educator and historian Ellen Lupton provides clear and concise guidance for anyone learning or brushing up on their typographic skills."
+  grLink="https://www.goodreads.com/book/show/2211399.Graphic_Designs"
+/>
+
+<EmpCard
+  cardTitle="Remember"
+  cardBody="Every time I think of the color green now, I find myself missing my childhood, recalling all the times I woke up early to watch my favorite cartoon reptiles. Even though that’s what I feel for the color green, it might not be the same for you. Why is that?"
+/>

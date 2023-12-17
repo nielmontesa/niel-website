@@ -1,0 +1,16 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import { Image } from "astro:assets";
+
+import clock from "../../public/images/ticking-clock.png";
+---
+
+<Layout title="Niel Montesa // Designer">
+  <section
+    class="flex flex-col justify-center items-center mx=auto w-full mt-16">
+    <Image src={clock} alt="A clock ticking." width={400} height={400} />
+    <h1 class="lg:text-7xl text-5xl">Coming Soon.</h1>
+    <p class="mt-6">Sorry, I'm still working on this page! :(</p>
+  </section>
+</Layout>
